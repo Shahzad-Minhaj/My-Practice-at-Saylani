@@ -1,0 +1,138 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}#logo{
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+align-items: center;
+padding: 0px 5px 0px 5px;
+
+margin-left: 15px;
+background-color: white;
+border-radius: 14px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    /* width: 100%; */
+    flex-wrap: nowrap;
+    background-color: black;
+    
+    
+    
+}
+#abd{
+    list-style: none;
+    display: flex;
+    text-align: center;
+    width: 230px;
+    padding: 0 10px 0 10px;
+    justify-content: space-between;
+    align-items: center;
+
+    
+    
+
+}
+.bot{
+    text-align: center;
+    border: 1px solid blue;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 5px 0px 5px 0px;
+}
+#abd a{
+text-decoration: none;
+color: aliceblue;
+
+}
+#abd a:hover{
+    color: gray;
+}
+main
+{
+    min-height: calc(100vh - 57px);
+    /* background-image: url(/images/A\ sad\ man\ standing\ in\ front\ of\ a\ burnt\ down\ home\ i.jpg); */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 500px;
+    
+    color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+main{
+    margin: 20px;
+}
+#output{
+    z-index: 1;
+    background-color: transparent;
+    margin-top: 0.5rem;
+    border-radius: 5px;
+    box-shadow: 2px 2px grey;
+    overflow: scroll;
+    color: black;
+
+}
+#field{
+    margin: 5px auto;
+}
+#getval{
+    padding: 5px;
+    border-radius: 5px;
+  
+    height: 1.5rem;
+}
+footer{
+    background-color: black;
+    color: greenyellow;
+    font-weight: bold;
+}
+.one
+{
+    background-color: blue;
+
+}
+.two{
+    background-color: yellow;
+
+}
+.three{
+    background-color: red;
+}
+.pare{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+section{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding-top: 50px;
+    text-align: center;
+    margin: 5px 0px 5px 0px;
+}
+#output3{
+    border: 3px dotted blue;
+    margin: 0 auto;
+    margin-bottom: 5px;
+    width: 5%;
+    min-height: 45px;
+    
+
+   
+}
+button{
+    background-color: blue;
+    color: aliceblue;
+    font-size: medium;
+    font-weight: bolder;
+    border-radius: 5px;
+    padding: 5px;
+    border: none;
+    margin: 10px;
+}
+button:hover{
+    background-color: black;
+}
