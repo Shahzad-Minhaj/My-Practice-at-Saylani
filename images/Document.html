@@ -1,23 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="Document_files/style.css">
 </head>
 
-<body>
+<body data-new-gr-c-s-check-loaded="8.909.0" data-gr-ext-installed="">
 
     <header>
 
         <nav>
             <div id="logo">Apple</div>
             <ul id="abd">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="About us.html">About Us</a></li>
-                <li> <a href="contact.html">contacts</a></li>
+                <li><a href="http://127.0.0.1:5500/index.html">Home</a></li>
+                <li><a href="http://127.0.0.1:5500/About%20us.html">About Us</a></li>
+                <li> <a href="http://127.0.0.1:5500/contact.html">contacts</a></li>
             </ul>
         </nav>
 
@@ -47,20 +46,19 @@
             <h1>Checking Odd and Even Numbers</h1>
             <p>Green and Red numbers will indicate odd and Even numbers</p>
             <button class="inc" onclick="increment()">increment</button>
-            <h1 class="value">abc</h1>
+            <h1 class="value">error</h1>
             <button class="dec" onclick="decrement()">decrement</button>
         </div>
     </section>
         <section id="cityin">
         <div style="text-align: center;">
             <h1 style="margin: 5px, auto;">Adding or Removing Cities from your Country</h1>
-            <input type="text" id="getval">
+            <input type="text" id="getval" value="asssesdfe">
             <button id="allCities">print all cities</button>
             <button id="addCities">Add cities</button>
             <button id="removeCity">Remove city</button>
         </div>
-        <div id="output"
-            style="min-height: 100px; border: 1px solid black; width: 35%; margin: 5px auto; justify-content: left;">
+        <div id="output" style="min-height: 100px; border: 1px solid black; width: 35%; margin: 5px auto; justify-content: left;">
         </div>
     </section>
         
@@ -74,7 +72,7 @@
 
         <section id="ludoGame">
             <h1>Ludo Game</h1>
-            <img src="/images/" alt="" id="theImg">
+            <img src="Document_files/Untitled.html" alt="" id="theImg">
             <div>
                 <h2>Player 1 Score: <span id="player1Score">0</span></h2>
                 <h2>Player 2 Score: <span id="player2Score">0</span></h2>
@@ -98,7 +96,7 @@
             <span id="sec"></span>
             <span id="milisec"></span></div> -->
             <table>
-                <tr><td>Year</td>
+                <tbody><tr><td>Year</td>
                     <td>Month</td>
                     <td>Day</td>
                     <td>Hour</td>
@@ -106,19 +104,19 @@
                     <td>Sec</td>
                     <td>Milisec</td>
                 </tr>
-                <tr><td id="year"></td>
-                    <td id="Month"></td>
-                    <td id="day"></td>
-                    <td id="hour"></td>
-                    <td id="mins"></td>
-                    <td id="sec"></td>
-                    <td id="milisec"></td>
+                <tr><td id="year">2024</td>
+                    <td id="Month">January</td>
+                    <td id="day">Wednesday</td>
+                    <td id="hour">0</td>
+                    <td id="mins">50</td>
+                    <td id="sec">37</td>
+                    <td id="milisec">687</td>
                 
                 </tr>
-            </table>
+            </tbody></table>
         </div>
         </section>
-        <script src="abc.js">
+        <script src="Document_files/abc.js">
 
         </script>
     </main>
@@ -127,6 +125,44 @@
         <p style="text-align: center;">ES Sports Since 2002</p>
     </footer>
 
-</body>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
 
-</html>
+
+</body></html>
