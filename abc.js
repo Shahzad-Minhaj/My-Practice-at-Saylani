@@ -242,7 +242,7 @@ console.log(x);
 //   alert("you are passed and got grade b");
 // }
 
-// -----------------------------
+// -----------------------------(BMI Calculator)--------------------
 
 //   let w = Number(prompt("enter your weight"));
 //   let h = Number(prompt("enter your height"));
@@ -270,7 +270,7 @@ console.log(x);
 // }
 
 
-
+//-------------------------------------------------------------------------------
 // let age = Number(prompt("Enter your age"));
 // let isLicense = false;
 // if(age> 18 && !isLicense){
@@ -279,7 +279,7 @@ console.log(x);
 // else{
 //   alert("you cannot drive")
 // }
-
+//---------------------------------------------------------------------------------
 // let s= prompt("enter your current stop");
 // let d= prompt("enter your destination");
 // // let chamkani = 0
@@ -502,51 +502,71 @@ document.getElementById("removeCity").onclick = function () {
 // console.log(y)
 
 //css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+//-----------------------(Lecture getting the current date and time 16-Jan-2024)--------------------------------------------------------------
+let nowDate = new Date()
+console.log(nowDate.getFullYear())
+console.log(new Date().getMonth())
+console.log(nowDate.getDay())
+console.log(nowDate.getHours())
+document.getElementById("year").innerHTML = nowDate.getFullYear()
+document.getElementById("Month").innerHTML = nowDate.getMonth()
+document.getElementById("day").innerHTML = nowDate.getDay()
+document.getElementById("hour").innerHTML = nowDate.getHours()
+document.getElementById("mins").innerHTML = nowDate.getMinutes()
+document.getElementById("sec").innerHTML = nowDate.getSeconds()
+document.getElementById("milisec").innerHTML = nowDate.getMilliseconds()
 //=======================================================================================================
 //            Rolling a dice
 //=======================================================================================================
-let player1Score = 0;
-    let player2Score = 0;
-    let currentPlayer = 1;
+document.getElementById("roll").onclick = function(){
+  let di= Math.trunc(Math.random() * 6 + 1)
+  document.getElementById("output3").innerHTML = di 
+  document.getElementById("theImg").src = `/images/dice-${di}.png`
+}
 
-    document.getElementById("roll").onclick = function () {
-        if (currentPlayer === 1 && player1Score === 0) {
-            // Game starts when Player 1 rolls a 6 for the first time
-            let diceKaX = Math.random() * 6 + 1;
-            let roll = Math.trunc(diceKaX);
-            console.log("Dice Roll: " + roll);
-            document.getElementById("output3").innerHTML = roll;
+// let player1Score = 0;
+//     let player2Score = 0;
+//     let currentPlayer = 1;
 
-            if (roll === 6) {
-                player1Score += roll;
-                document.getElementById("player1Score").innerHTML = player1Score;
-                currentPlayer = 2;
-            } else {
-                console.log("Player 1 needs to roll a 6 to start.");
-            }
-        } else if (currentPlayer === 2) {
-            // Player 2's turn
-            let diceKaX = Math.random() * 6 + 1;
-            let roll = Math.trunc(diceKaX);
-            console.log("Dice Roll: " + roll);
+//     document.getElementById("roll").onclick = function () {
+//         if (currentPlayer === 1 && player1Score === 0) {
+//             // Game starts when Player 1 rolls a 6 for the first time
+//             let diceKaX = Math.random() * 6 + 1;
+//             let roll = Math.trunc(diceKaX);
+//             console.log("Dice Roll: " + roll);
+//             document.getElementById("output3").innerHTML = roll;
 
-            if (roll === 6) {
-                player2Score += roll;
-                document.getElementById("player2Score").innerHTML = player2Score;
-                currentPlayer = 1;
-            } else {
-                console.log("Player 2 needs to roll a 6 to start.");
-            }
-        }
+//             if (roll === 6) {
+//                 player1Score += roll;
+//                 document.getElementById("player1Score").innerHTML = player1Score;
+//                 currentPlayer = 2;
+//             } else {
+//                 console.log("Player 1 needs to roll a 6 to start.");
+//             }
+//         } else if (currentPlayer === 2) {
+//             // Player 2's turn
+//             let diceKaX = Math.random() * 6 + 1;
+//             let roll = Math.trunc(diceKaX);
+//             console.log("Dice Roll: " + roll);
 
-        // Check for a winner
-        if (player1Score >= 100) {
-            announceWinner("Player 1");
-        } else if (player2Score >= 100) {
-            announceWinner("Player 2");
-        }
-    };
+//             if (roll === 6) {
+//                 player2Score += roll;
+//                 document.getElementById("player2Score").innerHTML = player2Score;
+//                 currentPlayer = 1;
+//             } else {
+//                 console.log("Player 2 needs to roll a 6 to start.");
+//             }
+//         }
 
-    function announceWinner(winner) {
-        console.log("Game Over! " + winner + " is the winner!");
-    }
+//         // Check for a winner
+//         if (player1Score >= 100) {
+//             announceWinner("Player 1");
+//         } else if (player2Score >= 100) {
+//             announceWinner("Player 2");
+//         }
+//     };
+
+//     function announceWinner(winner) {
+//         console.log("Game Over! " + winner + " is the winner!");
+//     }

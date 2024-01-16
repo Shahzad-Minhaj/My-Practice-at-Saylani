@@ -35,13 +35,13 @@ nav{
     
 
 }
-.bot{
+/* .bot{
     text-align: center;
     border: 1px solid blue;
     border-radius: 10px;
     padding: 15px;
     margin: 5px 0px 5px 0px;
-}
+} */
 #abd a{
 text-decoration: none;
 color: aliceblue;
@@ -65,9 +65,13 @@ main
 main{
     margin: 20px;
 }
+body{
+    background: linear-gradient(to right, #44a3a3, #8f81db);
+
+}
 #output{
     z-index: 1;
-    background-color: transparent;
+    background-color: white;
     margin-top: 0.5rem;
     border-radius: 5px;
     box-shadow: 2px 2px grey;
@@ -109,15 +113,18 @@ footer{
 section{
     border: 1px solid black;
     border-radius: 10px;
-    padding-top: 50px;
+    padding-top: 25px;
+    padding-bottom: 50px ;
     text-align: center;
     margin: 5px 0px 5px 0px;
+    box-shadow: 0px 2px 10px black;
 }
+
 #output3{
     border: 3px dotted blue;
     margin: 0 auto;
     margin-bottom: 5px;
-    width: 5%;
+    width: 7%;
     min-height: 45px;
     
 
@@ -135,4 +142,37 @@ button{
 }
 button:hover{
     background-color: black;
+}
+#Month, #year, #day , #hour, #mins,#sec, #milisec{
+    border: 1px solid green;
+    padding: 5px;
+    margin: 2px; 
+    
+}
+#theImg{
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 150px;
+    width: 150px;
+   
+}
+#ludoGame{
+    background-image: url(/images/photo-1605870445919-838d190e8e1b.avif);
+    align-items: center;
+    
+}
+#cityin{
+    background-image: url(/images/New\ York\ bridge\(1\).jpg);
+    background-position: center;
+    width: 100%;
+    background-repeat: no-repeat;
+
+}
+h2, h1{
+    background-color: black;
+    opacity: 0.5;
+    color: whitesmoke;
+    margin: 10px auto;
+    width: 40%;
+    
 }
