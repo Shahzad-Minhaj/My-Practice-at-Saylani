@@ -504,18 +504,26 @@ document.getElementById("removeCity").onclick = function () {
 //css-tricks.com/snippets/css/a-guide-to-flexbox/
 
 //-----------------------(Lecture getting the current date and time 16-Jan-2024)--------------------------------------------------------------
-let nowDate = new Date()
-console.log(nowDate.getFullYear())
-console.log(new Date().getMonth())
-console.log(nowDate.getDay())
-console.log(nowDate.getHours())
-document.getElementById("year").innerHTML = nowDate.getFullYear()
-document.getElementById("Month").innerHTML = nowDate.getMonth()
-document.getElementById("day").innerHTML = nowDate.getDay()
-document.getElementById("hour").innerHTML = nowDate.getHours()
-document.getElementById("mins").innerHTML = nowDate.getMinutes()
-document.getElementById("sec").innerHTML = nowDate.getSeconds()
-document.getElementById("milisec").innerHTML = nowDate.getMilliseconds()
+function updateTime() {
+  let nowDate = new Date();
+
+  const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  const dayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+  document.getElementById("year").innerHTML = nowDate.getFullYear();
+  document.getElementById("Month").innerHTML = monthNames[nowDate.getMonth()];
+  document.getElementById("day").innerHTML = dayNames[nowDate.getDay()];
+  document.getElementById("hour").innerHTML = nowDate.getHours();
+  document.getElementById("mins").innerHTML = nowDate.getMinutes();
+  document.getElementById("sec").innerHTML = nowDate.getSeconds();
+  document.getElementById("milisec").innerHTML = nowDate.getMilliseconds();
+}
+
+// Update time every second (1000 milliseconds)
+setInterval(updateTime, 1000);
+
+// Initial update to display the time immediately
+updateTime();
 //=======================================================================================================
 //            Rolling a dice
 //=======================================================================================================
