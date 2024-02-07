@@ -11,7 +11,7 @@
 // // // alert(result);
 // // console.log(result);
 // alert(a*b);
-//-----------------------------------------------------( ROUGH PRACTICS )----------------------------------------------
+//---------------------------------------------------( ROUGH PRACTICS )----------------------------------------------
 // function splitPopulation(totalPopulation) {
 //     // Ensure the total population is even for a fair split
 //     if (totalPopulation % 2 !== 0) {
@@ -36,7 +36,7 @@
 // var c=prompt(a,b);
 
 //=================================================================================================================
-//VERBAL ASSIGNMENT: ask user to check even & odd numbers
+//                  VERBAL ASSIGNMENT: Ask user to check for even & odd numbers
 //=================================================================================================================
 
 // var a = prompt("Enter any number to check if it's odd or even");
@@ -50,7 +50,7 @@
 // }
 
 //=================================================================================================================
-// ASSIGNMENT NO. 1 :
+//                                    ASSIGNMENT NO. 1 :
 //=================================================================================================================
 
 // population= prompt("Your country population");
@@ -109,14 +109,17 @@
 - 
 
 // let a = 2 + 2 * 4;
-let a = (2+2)*4 //result will be 16 due to the operator precedence rule from left to right
-let b = 2*4/2  //multiple will be performed first and then divide
+let a = (2+2)*4       //result will be 16 due to the operator precedence rule from left to right
+let b = 2*4/2         //multiple will be performed first and then divide
 console.log(a)
 */
-/* increment or decrement 
-you can make tasbeeh from this concept - do it yourself
+
+/* 
+increment or decrement 
+you can make tasbeeh (counter) from this concept - do it yourself
 
 */
+
 // let a=5
 // a=a+1
 // console.log(a)
@@ -162,7 +165,7 @@ else{
 
 //============================================================================================================================
 //Lecture  27/11
-//=======================================================================================================================
+//============================================================================================================================
 
 //Concatenating text strings- adding two strings
 
@@ -189,13 +192,14 @@ else{
 // else{
 //   alert("You are not eligible for CNIC");
 // }
-//---------------------------( Assignment )-------------------------------------------------------------
+//---------------------------( Assignment )-------------------------------------------------------------------------
 // create a program to ask the user if the temperature outside the room is greater than 20 then user can go outside
 //otherwise  user can staye at home if the temperature is 0 outside.
-//------------------------------------------------------------------------------------------------------
+//-----------------------------------------------------------------------------------------------------------------
 
 //===========================( LECTURE  28/11 )===================================================================
-// DOM overview
+//                              DOM overview
+
 let incWalaX = (document.querySelector(".heading").textcontent = "this is a page");
 console.log(incWalaX);
 
@@ -224,11 +228,14 @@ let x = (document.querySelector(".value").textContent = "error");
 console.log(x);
 
 
-// comparator == only check true and false in the condition whereas === sign check the condition as well as data type ed
-//7=="7"  the result will be true but the data types are diferent one is integar and other is string
-//7==="7" the result will be false as the data types are not equal. 
-//================(Assignment # 1 BMI calculator 2. guess the number )====================
-
+// NOTE:  Comparator == only check true and false in the condition whereas === sign check the condition as well as data type ed
+//        7=="7"  the result will be true but the data types are diferent one is integar and other is string
+//        7==="7" the result will be false as the data types are not equal. 
+//================(Assignment # 1)========================================================================================
+//        BMI calculator
+//================() Assignment # 2)======================================================================================
+//        guess the number
+//========================================================================================================================
 // let marks=Number(prompt("Enter your marks"));
 // if(marks >= 60)
 // {
@@ -335,7 +342,7 @@ console.log(x);
 // }
 
 
-// ================================================(array)=============================
+// ================================================(Array)=============================
 
 // var cities = ["karachi", "Peshawar", "Islamabad"];
 // console.log(cities)
@@ -487,7 +494,7 @@ document.getElementById("removeCity").onclick = function () {
     document.getElementById("output").innerHTML = "City not found";
   }
 }
-//------------------------------(Jan 7 2024)--------------------------------------------
+//------------------------------(Lecture Jan 7 2024)--------------------------------------------
 // let m = Math
 // console.log(m)
 //math is a builtin object
@@ -501,9 +508,9 @@ document.getElementById("removeCity").onclick = function () {
 // let y = Math.trunc(x)
 // console.log(y)
 
-//css-tricks.com/snippets/css/a-guide-to-flexbox/
+//  Visit Website to learn more about flexbox https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
-//-----------------------(Lecture getting the current date and time 16-Jan-2024)--------------------------------------------------------------
+//-----------------------(Lecture: getting the current date and time 16-Jan-2024)--------------------------------------------------------------
 function updateTime() {
   let nowDate = new Date();
 
@@ -525,7 +532,7 @@ setInterval(updateTime, 1000);
 // Initial update to display the time immediately
 updateTime();
 //=======================================================================================================
-//            Rolling a dice
+//            Rolling a dice-Practice
 //=======================================================================================================
 document.getElementById("roll").onclick = function(){
   let di= Math.trunc(Math.random() * 6 + 1)
@@ -533,48 +540,67 @@ document.getElementById("roll").onclick = function(){
   document.getElementById("theImg").src = `/images/dice-${di}.png`
 }
 
-// let player1Score = 0;
-//     let player2Score = 0;
-//     let currentPlayer = 1;
+let player1Score = 0;
+    let player2Score = 0;
+    let currentPlayer = 1;
 
-//     document.getElementById("roll").onclick = function () {
-//         if (currentPlayer === 1 && player1Score === 0) {
-//             // Game starts when Player 1 rolls a 6 for the first time
-//             let diceKaX = Math.random() * 6 + 1;
-//             let roll = Math.trunc(diceKaX);
-//             console.log("Dice Roll: " + roll);
-//             document.getElementById("output3").innerHTML = roll;
+    document.getElementById("roll").onclick = function () {
+        if (currentPlayer === 1 && player1Score === 0) {
+            // Game starts when Player 1 rolls a 6 for the first time
+            let diceKaX = Math.random() * 6 + 1;
+            let roll = Math.trunc(diceKaX);
+            console.log("Dice Roll: " + roll);
+            document.getElementById("output3").innerHTML = roll;
 
-//             if (roll === 6) {
-//                 player1Score += roll;
-//                 document.getElementById("player1Score").innerHTML = player1Score;
-//                 currentPlayer = 2;
-//             } else {
-//                 console.log("Player 1 needs to roll a 6 to start.");
-//             }
-//         } else if (currentPlayer === 2) {
-//             // Player 2's turn
-//             let diceKaX = Math.random() * 6 + 1;
-//             let roll = Math.trunc(diceKaX);
-//             console.log("Dice Roll: " + roll);
+            if (roll === 6) {
+                player1Score += roll;
+                document.getElementById("player1Score").innerHTML = player1Score;
+                currentPlayer = 1;
+            } else {
+                console.log("Player 1 needs to roll a 6 to start.");
+            }
+        } else if (currentPlayer === 2) {
+            // Player 2's turn
+            let diceKaX = Math.random() * 6 + 1;
+            let roll = Math.trunc(diceKaX);
+            console.log("Dice Roll: " + roll);
 
-//             if (roll === 6) {
-//                 player2Score += roll;
-//                 document.getElementById("player2Score").innerHTML = player2Score;
-//                 currentPlayer = 1;
-//             } else {
-//                 console.log("Player 2 needs to roll a 6 to start.");
-//             }
-//         }
+            if (roll === 6) {
+                player2Score += roll;
+                document.getElementById("player2Score").innerHTML = player2Score;
+                currentPlayer = 2;
+            } else {
+                console.log("Player 2 needs to roll a 6 to start.");
+            }
+        }
 
-//         // Check for a winner
-//         if (player1Score >= 100) {
-//             announceWinner("Player 1");
-//         } else if (player2Score >= 100) {
-//             announceWinner("Player 2");
-//         }
-//     };
+        // Check for a winner
+        if (player1Score >= 100) {
+            announceWinner("Player 1");
+        } else if (player2Score >= 100) {
+            announceWinner("Player 2");
+        }
+    };
 
-//     function announceWinner(winner) {
-//         console.log("Game Over! " + winner + " is the winner!");
-//     }
+    function announceWinner(winner) {
+        console.log("Game Over! " + winner + " is the winner!");
+    }
+    //========================(LECTURE: FUNCTIONS 22 Jan)============================
+    // function add(num1, num2){
+    //   return num1 + num2
+    // }
+    // let result = add(2,4)
+    // console.log(result)
+// function sqr(num){
+// return (num **2)
+// }
+// let result =sqr(prompt("enter a number"))
+// console.log(result)
+document.getElementById("gt").onclick =function(){
+function theAdd(num1, num2){
+  let result = num1+num2
+  document.getElementById("abc").innerHTML =result
+ }
+ theAdd(2,5)
+
+}
